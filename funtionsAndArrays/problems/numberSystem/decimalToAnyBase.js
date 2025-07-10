@@ -37,12 +37,11 @@ const decimalToAnyBase = (inputNumber, base) => {
   return `The ${inputNumber} in base ${base} is ${result}`;
 };
 
-
-console.log(decimalToAnyBase(10, 2)); // The number in base 2 is 1010
-console.log(decimalToAnyBase(634, 8)); // The number in base 2 is 1010
-console.log(decimalToAnyBase(255, 16)); // The number in base 16 is 255
-console.log(decimalToAnyBase(100, 8)); // The number in base 8 is 144
-console.log(decimalToAnyBase(123456, 36)); // The number in base 36 is 3D7
-console.log(decimalToAnyBase(0, 2)); // The number in base 2 is 0
-console.log(decimalToAnyBase(10, 1)); // Invalid input: number must be a non-negative integer and base must be between 2 and 36
-console.log(decimalToAnyBase(10, 37)); // Invalid input: number must be a non-negative integer and base must be between
+console.log(decimalToAnyBase(10, 2)); // Binary → "1010"
+console.log(decimalToAnyBase(255, 16)); // Hex → "FF"
+console.log(decimalToAnyBase(100, 8)); // Octal → "144"
+console.log(decimalToAnyBase(0, 10)); // Zero → "0"
+console.log(decimalToAnyBase(12345, 36)); // Max base → "9IX"
+console.log(decimalToAnyBase(-10, 2)); // Invalid input
+console.log(decimalToAnyBase(15.5, 2)); // Invalid input
+console.log(decimalToAnyBase(10, 1)); // Invalid base
