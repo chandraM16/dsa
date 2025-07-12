@@ -14,8 +14,10 @@ export const anyBaseToAnyBase = (inputNumber, fromBase, toBase) => {
     typeof toBase !== "number" ||
     !Number.isInteger(fromBase) ||
     !Number.isInteger(toBase) ||
-    (2 > fromBase && fromBase > 36) ||
-    (2 > toBase && toBase > 36)
+    2 > fromBase ||
+    fromBase > 36 ||
+    2 > toBase ||
+    toBase > 36
   ) {
     printInConsole("Invalid Input to anyBaseToAnyBase function !");
     return null;
@@ -48,6 +50,6 @@ export const anyBaseToAnyBase = (inputNumber, fromBase, toBase) => {
 // console.log(anyBaseToAnyBase("11010", 2, 16)); // ➤ "1A"
 // console.log(anyBaseToAnyBase("HELLO", 36, 10)); // ➤ "29234652"
 
-// console.log(anyBaseToAnyBase("123", 2, 10)); // ➤ "Invalid digit '2' for base 2"
-// console.log(anyBaseToAnyBase("", 10, 2)); // ➤ "Invalid input"
-// console.log(anyBaseToAnyBase("A1", 10, 2)); // ➤ "Invalid digit 'A' for base 10"
+console.log(anyBaseToAnyBase("123", 2, 10)); // ➤ "Invalid digit '2' for base 2"
+console.log(anyBaseToAnyBase("", 10, 2)); // ➤ "Invalid input"
+console.log(anyBaseToAnyBase("A1", 10, 2)); // ➤ "Invalid digit 'A' for base 10"
