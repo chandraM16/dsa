@@ -5,7 +5,7 @@ import { printInConsole } from "../../../globalHelperFunctions.js";
 export const fetchSpanOfArray = (arr) => {
   if (!arr || !Array.isArray(arr)) {
     printInConsole("Given input array is not array !");
-    return;
+    return -1;
   }
   if (arr.length === 0 || arr.length === 1) {
     return 0;
@@ -17,7 +17,7 @@ export const fetchSpanOfArray = (arr) => {
     const element = arr[idx];
     if (typeof element !== "number") {
       printInConsole(`${element} is not number at index ${idx}`);
-      return 0;
+      return -1;
     }
     min = Math.min(min, element);
     max = Math.max(max, element);
