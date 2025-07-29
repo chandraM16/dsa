@@ -37,22 +37,22 @@ export const matrixMultiplication = (arr1, arr2) => {
   return res;
 };
 
-// // 1. Square Matrix (3×3) × (3×2)
-// console.log(
-//   matrixMultiplication(
-//     [
-//       [1, 2, 3],
-//       [4, 5, 6],
-//       [7, 8, 9],
-//     ],
-//     [
-//       [1, 2],
-//       [3, 4],
-//       [5, 6],
-//     ]
-//   )
-// );
-// Expected: [[22, 28], [49, 64], [76, 100]]
+// 1. Square Matrix (3×3) × (3×2)
+console.log(
+  matrixMultiplication(
+    [
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9],
+    ],
+    [
+      [1, 2],
+      [3, 4],
+      [5, 6],
+    ]
+  )
+);
+Expected: [[22, 28], [49, 64], [76, 100]]
 
 // 2. 2×3 × 3×2
 console.log(
