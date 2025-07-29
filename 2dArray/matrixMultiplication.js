@@ -27,11 +27,7 @@ export const matrixMultiplication = (arr1, arr2) => {
     for (let j = 0; j < arr2Info.col; j++) {
       let sum = 0;
       for (let k = 0; k < arr1Info.col; k++) {
-        let num1 = arr1[i][k];
-        let num2 = arr2[k][j];
-
-        let multiplication = num1 * num2;
-        sum = sum + multiplication;
+        sum += arr1[i][k] * arr2[k][j];
       }
       itemArr.push(sum);
     }
