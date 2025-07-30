@@ -1,8 +1,8 @@
 import { isValidTwoDArr, printInConsole } from "../globalHelperFunctions.js";
 
 export const matrixMultiplication = (arr1, arr2) => {
-  const arr1Info = isValidTwoDArr(arr1);
-  const arr2Info = isValidTwoDArr(arr2);
+  const arr1Info = isValidTwoDArr(arr1, "number");
+  const arr2Info = isValidTwoDArr(arr2, "number");
   if (!arr1Info.isValid) {
     printInConsole("Invalid Arr1");
     return;
@@ -52,7 +52,11 @@ console.log(
     ]
   )
 );
-Expected: [[22, 28], [49, 64], [76, 100]]
+Expected: [
+  [22, 28],
+  [49, 64],
+  [76, 100],
+];
 
 // 2. 2×3 × 3×2
 console.log(
