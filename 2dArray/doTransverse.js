@@ -1,6 +1,6 @@
 import { isValidTwoDArr, printInConsole } from "../globalHelperFunctions.js";
 
-const doTransverse = (arr = [[]]) => {
+export const doTransverse = (arr = [[]]) => {
   const arrInfo = isValidTwoDArr({ arr, isSquare: true });
 
   if (!arrInfo.isValid) {
