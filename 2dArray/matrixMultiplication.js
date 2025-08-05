@@ -1,8 +1,8 @@
 import { isValidTwoDArr, printInConsole } from "../globalHelperFunctions.js";
 
 export const matrixMultiplication = (arr1, arr2) => {
-  const arr1Info = isValidTwoDArr(arr1, "number");
-  const arr2Info = isValidTwoDArr(arr2, "number");
+  const arr1Info = isValidTwoDArr({ arr: arr1, eleType: "number" });
+  const arr2Info = isValidTwoDArr({ arr: arr2, eleType: "number" });
   if (!arr1Info.isValid) {
     printInConsole("Invalid Arr1");
     return;

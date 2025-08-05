@@ -10,7 +10,7 @@ import { isValidTwoDArr, printInConsole } from "../globalHelperFunctions.js";
 // like this > 1,4,7,8,5,2,3,6,9
 
 const printInWave = (arr) => {
-  if (!isValidTwoDArr(arr).isValid) {
+  if (!isValidTwoDArr({ arr }).isValid) {
     printInConsole("Invalid arr");
     return null;
   }

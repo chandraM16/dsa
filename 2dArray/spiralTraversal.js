@@ -9,7 +9,7 @@
 import { isValidTwoDArr, printInConsole } from "../globalHelperFunctions.js";
 
 const printInSpiralWay = (arr) => {
-  const arrInfo = isValidTwoDArr(arr);
+  const arrInfo = isValidTwoDArr({ arr });
   if (!arrInfo.isValid) {
     printInConsole("Invalid Arr input");
     return null;

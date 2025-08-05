@@ -13,7 +13,7 @@ import { isValidTwoDArr, printInConsole } from "../globalHelperFunctions.js";
 // ]
 
 const exitPointOfMatrix = (arr) => {
-  const arrInfo = isValidTwoDArr(arr, "number");
+  const arrInfo = isValidTwoDArr({ arr, eleType: "number" });
   if (!arrInfo.isValid) {
     printInConsole("Invalid Arr Input!");
   }

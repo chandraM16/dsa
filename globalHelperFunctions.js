@@ -7,7 +7,7 @@ export const throwError = (message) => {
   throw new Error(message);
 };
 
-export const isValidTwoDArr = (arr, eleType) => {
+export const isValidTwoDArr = ({ arr, eleType, isSquare }) => {
   try {
     if (!arr || !Array.isArray(arr)) {
       return { isValid: false };
@@ -20,8 +20,10 @@ export const isValidTwoDArr = (arr, eleType) => {
         return { isValid: false };
       }
       let itemArrLength = arr[0]?.length;
-      if (col !== itemArrLength) {
+      if (col !== itemArrLength || (isSquare && itemArrLength !== row)) {
         return { isValid: false };
+      } else {
+        col = itemArrLength;
       }
       if (eleType) {
         for (let j = 0; j < itemArrLength; j++) {
