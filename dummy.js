@@ -13,4 +13,6 @@ function foo(a = []) {
 }
 
 console.log(foo(arr));
-console.log({ arr });
+console.log({ arr }); 
+
+// 
