@@ -1,3 +1,24 @@
+// Input Format: N = 3
+// Result:
+//   *
+//   **
+//   ***
+//   **
+//   *
+// Input Format: N = 6
+// Result:
+//      *
+//      **
+//      ***
+//      ****
+//      *****
+//      ******
+//      *****
+//      ****
+//      ***
+//      **
+//      *
+
 const printPatternP10 = (n) => {
   for (let i = 1; i <= n; i++) {
     let str = "";
